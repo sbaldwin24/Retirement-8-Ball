@@ -23,7 +23,7 @@ h1 {
   margin: 0;
   padding: 0;
   font-family: 'Raleway';
-  font-weight: 400;
+  font-weight: 600;
   font-size: 2.4em;
   color: #9A12B3;
 }
@@ -65,7 +65,6 @@ span:nth-child(2n) {
   top: 75%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
   z-index: 10;
 }
 
@@ -77,7 +76,22 @@ span:nth-child(2n) {
   overflow: hidden;
   position: relative;
   box-shadow: inset -10px 10px 50px rgba(255,255,255,0.4), inset 5px -5px 50px rgba(0,0,0,1), inset 50px -50px 200px rgba(0,0,0,1), inset 0px -20px 20px rgba(60,0,60, 1);
+
 }
+
+.eball:hover{
+  -webkit-animation:shake 0.2s 1 linear; 
+  -ms-animation:shake 0.2s 1 linear;
+  animation:shake 0.2s 1 linear;
+
+}
+
+@-webkit-keyframes shake{0%{-webkit-transform:scale(1);transform:scale(1);}20%{-webkit-transform:scale(0.95);transform:scale(0.95);}50%{-webkit-transform:scale(1.2);transform:scale(1.2);}70%{-webkit-transform:scale(0.84);transform:scale(0.84);}
+90%{-webkit-transform:scale(1.08);transform:scale(1.08);}
+100%{-webkit-transform:scale(1);transform:scale(1);}}
+
+@keyframes shake{0%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}20%{-webkit-transform:scale(0.95);-ms-transform:scale(0.95);transform:scale(0.95)}50%{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}70%{-webkit-transform:scale(0.84);-ms-transform:scale(0.84);transform:scale(0.84)}90%{-webkit-transform:scale(1.08);-ms-transform:scale(1.08);transform:scale(1.08)}100%{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}}
+
 
 .egrad{
   position: absolute;
@@ -90,6 +104,7 @@ span:nth-child(2n) {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
+
 .ewin{
   position: absolute;
   background: linear-gradient(45deg, rgba(20,0,20,1) 0%, rgba(40,0,40,1) 100%);
@@ -159,12 +174,12 @@ span:nth-child(2n) {
   width: 200px; 
   filter: blur(40px);
   -webkit-filter: blur(50px);
-  position: absolute;
+  position: relative;
   margin-top: 200px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%,-50%) scaleY(0.1);
-  transform: translate(-50%,-50%) scaleY(0.1);
+  top: 75%;
+  left: 55%;
+  -webkit-transform: translate(-85%,-50%) scaleY(0.1);
+  transform: translate(-85%,-50%) scaleY(0.1);
   z-index: 1;
 }
 
@@ -177,9 +192,8 @@ span:nth-child(2n) {
 
 <body>
   <h1>Will you outlive your retirement savings?</h1>
-
+<div class="shadow"></div>
   <center>
-  <div class="shadow"></div>
 
   <div class="epos">
 <div class="eball">
